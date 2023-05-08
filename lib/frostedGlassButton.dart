@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:reaps/constants.dart';
+import 'constants.dart';
 
 class FrostedGlassButton extends StatefulWidget {
   const FrostedGlassButton(
@@ -10,12 +10,14 @@ class FrostedGlassButton extends StatefulWidget {
       this.color,
       required this.label,
       this.iconData,
+      this.alt,
       this.text = "Test"})
       : super(key: key);
 
   final IconData? iconData;
   final String text;
   final Function onTap;
+  final String? alt;
   final Color? color;
   final String label;
 
@@ -26,7 +28,6 @@ class FrostedGlassButton extends StatefulWidget {
 class _FrostedGlassButtonState extends State<FrostedGlassButton> {
   @override
   Widget build(BuildContext context) {
-    assert(debugCheckHasMaterial(context));
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       clipBehavior: Clip.antiAlias,
@@ -35,7 +36,7 @@ class _FrostedGlassButtonState extends State<FrostedGlassButton> {
         child: Container(
           // height: 50,
           width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: EdgeInsets.symmetric(horizontal: 5),
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -54,18 +55,18 @@ class _FrostedGlassButtonState extends State<FrostedGlassButton> {
                       ? Icon(
                           widget.iconData,
                           color: Colors.white,
-                          size: 16,
+                          size: 12,
                         )
                       : const SizedBox(),
                 ),
                 SizedBox(
-                  width: 3,
+                  width: 1,
                 ),
                 Expanded(
-                  flex: 5,
+                  flex: 4,
                   child: Text(
                     widget.label,
-                    style: kh2.copyWith(fontSize: 15),
+                    style: kh2.copyWith(fontSize: 12),
                   ),
                 ),
                 Expanded(
@@ -73,9 +74,22 @@ class _FrostedGlassButtonState extends State<FrostedGlassButton> {
                   child: Text(
                     widget.text,
                     style: kh2.copyWith(
-                        fontSize: 15, color: Colors.blueGrey.shade100),
+                        fontSize: 12,
+                        color: widget.alt == null
+                            ? Colors.blueGrey.shade100
+                            : Colors.lightGreen.shade200),
                   ),
-                )
+                ),
+                widget.alt != null
+                    ? Expanded(
+                        flex: 3,
+                        child: Text(
+                          widget.alt!,
+                          style: kh2.copyWith(
+                              fontSize: 12, color: Colors.redAccent.shade200),
+                        ),
+                      )
+                    : Container()
               ],
             ),
           ),
