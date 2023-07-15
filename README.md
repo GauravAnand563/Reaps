@@ -30,5 +30,13 @@ This section evaluates the stacked LSTM Autoencoder model's performance in predi
 📱 **Need for the App**
 The thesis emphasizes the need for a mobile application that provides real-time weather updates and alerts, especially in regions with limited access to conventional methods. The Reaps Mobile App addresses this need by offering advanced weather prediction capabilities, extreme weather alerts, and data storage for 6h, 12h, and 24h predictions. It utilizes Flutter for the frontend and Firebase for notification and data storage, ensuring accurate and reliable weather information.
 
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/fb8cd060-3dcf-49ad-a2cc-e6cd3dfbbc25" alt="Image 1" style="height: 300px;">
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/a33d6db8-3d8d-4839-b817-67386c22069a" alt="Image 2" style="height: 300px;">
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/d0328406-0195-4afc-b090-e9e3b3c31191" alt="Image 3" style="height: 300px;">
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/a80da38e-4c47-470c-bb30-1f42436d2afd" alt="Image 4" style="height: 300px;">
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/79311d86-7fc3-4729-8efa-35f5d32049c2" alt="Image 5" style="height: 300px;">
+<img src="https://github.com/GauravAnand563/Reaps/assets/10172216/5e4332ff-f960-4c31-b3b1-1a57fbe52a77" alt="Image 6" style="height: 300px;">
+
+
 ✅ **Functional Requirements of the App**
 The Reaps Mobile App has functional requirements, including fetching current weather data, utilizing machine learning models for weather prediction and classification, offering a user-friendly interface, sending notifications for extreme weather conditions, and storing weather data for the last 
